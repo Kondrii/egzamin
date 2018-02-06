@@ -8,8 +8,8 @@
 6. [Rasteryzacja, algorytmy rysowania prymitywów graficznych, antyaliasing.](#rasteryzacja...) 
 7. [Generowanie sceny przy pomocy “śledzenia promieni”.](#generowanie-sceny...) 
 8. [Algorytmy eliminowania powierzchni zasłoniętych.](#algorytm-eliminowania-powierzchni-zasłoniętych)
-9. Modele oświetlenia. 
-10 Materiały, tekstury.
+9. [Modele oświetlenia.](#modele-oświetlenia) 
+10. [Materiały, tekstury.](#materiały,-tekstury)
 
 
 ## Modele Barw
@@ -253,3 +253,29 @@ gicznie definiujemy xz i yz ograniczenia,
 
 – xyz - ograniczenie jako prostopadłościan [xmin, xmax]×[ymin, ymax]×
 [zmin, zmax].
+
+## Modele oświetlenia
+
+[Całkiem przyjemny opis modeli oświetlenia](http://mst.mimuw.edu.pl/lecture.php?lecture=gk1&part=Ch10)
+
+## Materiały, tekstury
+
+### Materiały
+
+Materiał – zespół cech powierzchni obiektu trójwymiarowego przetwarzanego w programie graficznym lub bibliotece programistycznej; oprogramowanie użytkowe pozwala zwykle tworzyć zestawy materiałów, które następnie można wielokrotnie używać.
+
+Materiał opisuje:
+- model oświetlenia (np. Phonga, Blinna) oraz jego parametry,
+- barwę powierzchni, barwę światła odbitego i rozproszonego,
+- tekstury i ich modyfikacje.
+- stopień przezroczystości,
+- współczynnik załamania światła,
+
+### Tekstury
+
+Teksturowanie – technika stosowana w grafice trójwymiarowej, której celem jest przedstawienie szczegółów powierzchni obiektów przestrzennych za pomocą obrazów bitmapowych (tekstur) lub funkcji matematycznych (tekstur proceduralnych). 
+
+Mapowanie tekstury określa, w jaki sposób powiązać piksele (nazywane w tym kontekście tekselami) lub wartości funkcji z powierzchnią obiektu. 
+
+Tekstury niosą informacje o barwie powierzchni, jak również innych parametrach generowanego obrazu, związanych np. z modelem oświetlenia: barwa światła odbitego, rozproszonego, stopień przezroczystości, współczynnik załamania światła itp.
+
