@@ -9,7 +9,7 @@
 7. [Generowanie sceny przy pomocy “śledzenia promieni”.](#generowanie-sceny...) 
 8. [Algorytmy eliminowania powierzchni zasłoniętych.](#algorytm-eliminowania-powierzchni-zasłoniętych)
 9. [Modele oświetlenia.](#modele-oświetlenia) 
-10. [Materiały, tekstury.](#materiały,-tekstury)
+10. [Materiały, tekstury.](#materiały-i-tekstury)
 
 
 ## Modele Barw
@@ -258,7 +258,7 @@ gicznie definiujemy xz i yz ograniczenia,
 
 [Całkiem przyjemny opis modeli oświetlenia](http://mst.mimuw.edu.pl/lecture.php?lecture=gk1&part=Ch10)
 
-## Materiały, tekstury
+## Materiały i tekstury
 
 ### Materiały
 
