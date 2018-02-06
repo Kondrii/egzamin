@@ -1,15 +1,15 @@
 # Elementy Grafiki Komputerowej
 
-- [Modele barw.](#modele-barw)
-- [Metody kompresji obrazów.](#metody-kompresji-obrazów)
-- Formaty plików graficznych.
-- Rzutowanie.
-- Rendering.
-- Rasteryzacja, algorytmy rysowania prymitywów graficznych (w szczególności algorytm rysowania odcinka),  antyaliasing. 
-- Generowanie sceny przy pomocy “śledzenia promieni”. 
-- Algorytmy eliminowania powierzchni zasłoniętych.
-- Modele oświetlenia. 
-- Materiały, tekstury.
+1. [Modele barw.](#modele-barw)
+2. [Metody kompresji obrazów.](#metody-kompresji-obrazów)
+3. [Formaty plików graficznych.](#formaty-plików-graficznych)
+4. [Rzutowanie.](#rzutowanie)
+5. Rendering.
+6. Rasteryzacja, algorytmy rysowania prymitywów graficznych (w szczególności algorytm rysowania odcinka),  antyaliasing. 
+7. Generowanie sceny przy pomocy “śledzenia promieni”. 
+8. Algorytmy eliminowania powierzchni zasłoniętych.
+9. Modele oświetlenia. 
+10 Materiały, tekstury.
 
 
 ## Modele Barw
@@ -95,3 +95,35 @@ Wady:
 ![HSV Image](Images/HSV.png)
 
 ## Metody Kompresji Obrazów
+
+- Zmniejszenie głębi barw (kodowanie koloru)
+- Zmniejszenie rozdzielczości (podmiana kilku pikseli na jeden o uśrednionym kolorze)
+- W sumie to nie ma tego zbyt wiele...
+
+## Formaty Plików Graficznych
+
+#### Grafika Rastrowa 
+
+- JPEG
+- TIFF
+- PNG
+- BMP
+- ...
+
+#### Grafika Wektorowa
+
+- PDF
+- SVG
+- SWF
+- EPS
+- ...
+
+#### Pliki CAD
+
+- DWG
+- DGN
+- STL
+- ...
+
+## Rzutowanie
+
