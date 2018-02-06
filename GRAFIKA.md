@@ -127,3 +127,58 @@ Wady:
 
 ## Rzutowanie
 
+- Rzutowanie polega na przekształceniu punktów w n wymiarowej przestrzeni na punkty w n − 1 wymiarowej przestrzeni.
+- W grafice komputerowej wykorzystuje się rzutowanie z przestrzeni 3-wymiarowej do przestrzeni 2-wymiarowej.
+- Planarne rzuty geometryczne (rzuty) można podzielić na dwie podstawowe klasy:
+  - rzuty równoległe
+  - rzuty perspektywiczne
+  
+### Rzutowanie Perspektywiczne
+
+- W rzutowaniu perspektywicznym odległość między środkiem rzutowania a płaszczyzną rzutowania jest skończona.
+- Rzuty perspektywiczne dzielimy ze względu na liczbę podstawowych punktów zbieżności, a tym samym ze względu na liczbę osi przecinanych przez rzutnię.
+
+### Rzutowanie Równoległe
+
+- W rzutowaniu równoległym odległość między środkiem rzutowania a płaszczyzną rzutowania zbiega do nieskończoności.
+- Skoro środek rzutowania znajduje się w nieskończoności, więc promienie rzutujące są do siebie równoległe i mają ten sam kierunek k.
+
+#### Podział Rzutów Równoległych
+
+##### Rzuty ortogonalne
+
+- Kierunek rzutowania jest prostopadły do rzutni
+- Umożliwiają mierzenie odległości i kątów
+- Najbardziej popularne: 
+  - przedni, 
+  - górny, 
+  - boczny
+- Aksonometryczne rzuty ortogonalne
+  - Przypominają rzut perspektywiczny, różnica polega na tym, że skrót jest równomierny, a nie jest związany z odległością od środka rzutu.
+  - Równoległość linii jest zachowana, ale równość kątów nie jest zachowana, a odległości mogą być mierzone wzdłuż każdej głównej osi.
+  - Rzuty izometryczne
+    - normalna do rzutni tworzy równe kąty z głównymi osiami,
+    - wszystkie trzy podstawowe osie są jednakowo skrócone, dzięki temu można wykonywać pomiary wzdłuż osi w tej samej skali,
+    - kąty między rzutami głównych osi są takie same i wynoszą 120 stopni
+
+##### Rzuty ukośne
+
+- Normalna do rzutni i kierunek rzutowania różnią się
+- Łączą właściwości rzutów prostokątnych czołowego, górnego i bocznego z właściwościami rzutu aksonometrycznego:
+  - rzutnia jest prostopadła do głównej osi,
+  - jeśli rzutujemy obiekt znajdujący się na płaszczyźnie równoległej do rzutni, to można wykonywać pomiary kątów i odległości,
+  - jeśli rzutujemy obiekt znajdujący się na płaszczyźnie, która nie jest równoległa do rzutni, to można wykonywać pomiary odległości wzdłuż głównych osi.
+  
+##### Różnice
+
+Perspektywiczny:
+- sprawia wrażenie realistycznego,
+- zmienia relacje odległości,
+- brak szczególnych zastosowań do rejestrowania dokładnego kształtu i pomiarów obiektów.
+
+Równoległy:
+- daje obraz mniej realistyczny,
+- zachowuje równoległość prostych,
+- zachowuje stosunek długości odcinków równoległych,
+- zachowuje związki miarowe figury płaskiej równoległej do płaszczyzny rzutowania,
+- stosuje się go głównie w rysunku technicznym.
