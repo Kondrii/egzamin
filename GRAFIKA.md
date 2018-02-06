@@ -4,10 +4,10 @@
 2. [Metody kompresji obrazów.](#metody-kompresji-obrazów)
 3. [Formaty plików graficznych.](#formaty-plików-graficznych)
 4. [Rzutowanie.](#rzutowanie)
-5. Rendering.
-6. Rasteryzacja, algorytmy rysowania prymitywów graficznych (w szczególności algorytm rysowania odcinka),  antyaliasing. 
-7. Generowanie sceny przy pomocy “śledzenia promieni”. 
-8. Algorytmy eliminowania powierzchni zasłoniętych.
+5. [Rendering.](#rendering)
+6. [Rasteryzacja, algorytmy rysowania prymitywów graficznych, antyaliasing.](#rasteryzacja...) 
+7. [Generowanie sceny przy pomocy “śledzenia promieni”.](#generowanie-sceny...) 
+8. [Algorytmy eliminowania powierzchni zasłoniętych.](#algorytm-eliminowania-powierzchni-zasłoniętych)
 9. Modele oświetlenia. 
 10 Materiały, tekstury.
 
@@ -169,7 +169,7 @@ Wady:
   - jeśli rzutujemy obiekt znajdujący się na płaszczyźnie równoległej do rzutni, to można wykonywać pomiary kątów i odległości,
   - jeśli rzutujemy obiekt znajdujący się na płaszczyźnie, która nie jest równoległa do rzutni, to można wykonywać pomiary odległości wzdłuż głównych osi.
   
-##### Różnice
+### Różnice
 
 Perspektywiczny:
 - sprawia wrażenie realistycznego,
@@ -182,3 +182,74 @@ Równoległy:
 - zachowuje stosunek długości odcinków równoległych,
 - zachowuje związki miarowe figury płaskiej równoległej do płaszczyzny rzutowania,
 - stosuje się go głównie w rysunku technicznym.
+
+## Rendering [SKIP]
+
+## Rasteryzacja...
+
+Rasteryzacja – działanie polegające na jak najwierniejszym przedstawieniu płaskiej figury geometrycznej na urządzeniu rastrowym, dysponującym skończoną rozdzielczością.
+
+### Rysowanie odcinka
+
+- Dane są punkty końcowe odcinka (x0, y0),(xk, yk).
+- __Założenia__: |a| <= 1 oraz x0 <= xk, y0 <= yk.
+- Zaczynając od punktu (x0, y0) będziemy zwiększać wartość x o 1, obliczając kolejne piksele odcinka.
+- Aby obliczyć i-ty piksel odcinka, dla punktu xi obliczamy wartość yi = a · xi + b i obliczoną wartość zaokrąglamy (w górę lub w dół) do liczby całkowitej, czyli i-ty piksel odcinka, to punkt o współrzędnych (xi, round(yi)).
+
+### Rysowanie okręgu
+
+- Rysowanie okręgu
+- Okrąg o środku w początku układu współrzędnych i promieniu równym R ma postać: x^2 + y^2 = R^2
+- Okrąg, którego środek nie leży w początku układu współrzędnych może zostać przesunięty do początku układu współrzędnych.
+- Możemy narysować tylko 1/4 łuku okręgu, czyli y = round(√R^2 − x^2), dla x ∈ [0, R] i stosując symetrię odbić 4 razy ten fragment łuku względem osi.
+
+### Antyaliasing
+
+Zespół technik służących zmniejszeniu liczby błędów zniekształceniowych aliasing lub schodkowania obrazu, powstających przy reprezentacji obrazu lub sygnału o wysokiej rozdzielczości w rozdzielczości mniejszej.
+
+## Generowanie sceny...
+
+Technika generowania fotorealistycznych obrazów scen trójwymiarowych. Opiera się na analizowaniu tylko tych promieni światła, które trafiają bezpośrednio do obserwatora.
+
+### Algorytm
+
+Algorytm śledzenia promieni wygląda następująco:
+- Z punktu w którym znajduje się obserwator wyprowadzany jest promień pierwotny, który przecina rzutnię.
+- Wyszukiwany jest najbliższy punkt przecięcia z obiektami znajdującymi się na scenie.
+- Następnie dla każdego źródła światła zdefiniowanego na scenie wyznaczana jest jasność w tym punkcie, zgodnie z określonym modelem oświetlenia (np. Lamberta czy Phonga).
+
+## Algorytm eliminowania powierzchni zasłoniętych
+
+- Algorytmy przestrzeni danych – wyznaczają reprezentację obszaru widocznego, na podstawie której moża wykonać wiele obrazów, o dowolnej rozdzielczości (w tym obrazy otrzymane po zmianie rzutni, przy ustalonym położeniu obserwatora),
+  - algorytm odrzucania ścian tylnych,
+  - algorytm analizy położenia obiektów w przestrzeni i informacji z rzutu,
+  - algorytm Ricciego,
+  - algorytm Appela.
+- Algorytmy przestrzeni obrazu – wynikiem takiego algorytmu jest obraz, czyli tablica odpowiednio pokolorowanych pikseli. Dla każdego piksela mogą być dodatkowe informacje z nim związane. Zmiana rozdzielczości obrazu wymaga ponownego wykonania algorytmu widoczności.
+  - algorytm z buforem głębokości,
+  - algorytm malarski (sortowania ścian),
+  - algorytm przeglądania liniami poziomymi,
+  - algorytm podziału binarnego,
+  - algorytm rysowania powierzchni krzywoliniowych.
+
+### Algorytm Malarski
+
+Posortuj elementarne fragmenty sceny (wielokąty) od najdalszej od ob-
+serwatora, czyli leżącej najgłębiej w kierunku patrzenia do najbliższej.
+
+• Pomaluj fragmenty obrazu w tej kolejności.
+
+• Sortowanie położenia ścian względem położenia obserwatora jest zada-
+niem trudnym i może prowadzić do niejednoznaczności.
+
+• Dla każdej ściany definiuje się ograniczenia:
+– x-ograniczenie jako przedział [xmin, xmax] taki, że współrzędne x
+
+wszystkich punktów tego obiektu należą do tego przedziału, ana-
+logicznie definiujemy y-ograniczenia, z-ograniczenia,
+
+– xy - ograniczenie jako prostokąt [xmin, xmax] × [ymin, ymax], analo-
+gicznie definiujemy xz i yz ograniczenia,
+
+– xyz - ograniczenie jako prostopadłościan [xmin, xmax]×[ymin, ymax]×
+[zmin, zmax].
