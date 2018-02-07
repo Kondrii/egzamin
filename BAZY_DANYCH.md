@@ -1,18 +1,18 @@
 # Bazy Danych
 
-1. [Relacyjny model danych](#relacyjny-model-danych...) i algebra relacji: atrybuty, dziedziny atrybutów, krotki i relacje; operacje na relacjach
+1. [Relacyjny model danych](#relacyjny-model-danych) i algebra relacji: atrybuty, dziedziny atrybutów, krotki i relacje; operacje na relacjach
 2. [Język SQL](#język-sql) – zapytania, selekcja, sortowanie, grupowanie, funkcje agregujące, podzapytania.
 3. [Instrukcje DML](#instrukcje-dml) – usuwanie, aktualizacja i dołączanie danych.
 4. [Instrukcje DDL](#instrukcje-ddl) – tworzenie tabel, modyfikacje struktury tabel, usuwanie tabel.
-5. [Zależności funkcyjne.](#zależności-funkcyjne...) Aksjomaty Armstronga. Integralność danych (klucze, klucze obce). Opcje propagacji.
-6. [Postacie normalne:](#normalizacja...) 1NF, 2NF, 3NF, BCNF, 4NF. Normalizacja.
-7. [Indeksy.](#indeksy...) Widoki. Procedury składowane. Wyzwalacze.
-8. [Modelowanie danych:](#modelowanie-danych...) model logiczny (diagram związków encji - ERD) i model relacyjny 
-9. [Systemy transakcyjne i analityczne](#systemy...) - podstawowe różnice
-10. [Transakcje.](#transakcje...) Własności ACID. Poziomy izolacji.
-11. [Administrowanie](#administrowanie...) użytkownikami bazy danych i ochrona danych.
+5. [Zależności funkcyjne.](#zależności-funkcyjne) Aksjomaty Armstronga. Integralność danych (klucze, klucze obce). Opcje propagacji.
+6. [Postacie normalne:](#normalizacja) 1NF, 2NF, 3NF, BCNF, 4NF. Normalizacja.
+7. [Indeksy.](#indeksy) Widoki. Procedury składowane. Wyzwalacze.
+8. [Modelowanie danych:](#modelowanie-danych) model logiczny (diagram związków encji - ERD) i model relacyjny 
+9. [Systemy transakcyjne i analityczne](#systemy) - podstawowe różnice
+10. [Transakcje.](#transakcje) Własności ACID. Poziomy izolacji.
+11. [Administrowanie](#administrowanie) użytkownikami bazy danych i ochrona danych.
 
-## Relacyjny model danych...
+## Relacyjny model danych
 
 Model organizacji danych bazujący na matematycznej teorii mnogości, w szczególności na pojęciu relacji.
 
@@ -114,7 +114,7 @@ TRUNCATE [ TABLE ] name [, ...] [ CASCADE | RESTRICT ]
 - DROP
 - SET
 
-## Zależności Funkcyjne...
+## Zależności Funkcyjne
 
 Zależność funkcyjna występuje wtedy, gdy po ustaleniu wartości pewnych atrybutów relacji wartości jakichś innych atrybutów tej relacji są jednoznacznie wyznaczone (unikalne).
 
@@ -130,7 +130,7 @@ Reguły wnioskowania Armstronga służą do wyprowadzania zależności z innych 
 
 ![Armstrong](Images/Armstrong.png)
 
-## Normalizacja...
+## Normalizacja
 
 Normalizacja to proces, służący do przekształcenia schematu zawierającego redundancję w schemat, który jej nie zawiera. Zależnie od potrzeb określa się różne poziomy normalizacji — zakresy usuwania redundancji, nazywane postaciami normalnymi.
 
@@ -163,7 +163,7 @@ Będzie tak między innymi wtedy, gdy pewne dwa niekluczowe atrybuty przyjmują 
     
 Relacja R jest w czwartej postaci normalnej (4NF), jeśli dla każdej nietrywialnej zależności X ->> Y w R, X jest nadkluczem R.
 
-## Indeksy...
+## Indeksy
 
 Indeks jest specjalną strukturą danych wprowadzoną w celu zwiększenia prędkości wykonywania operacji na tabeli. Indeks w bazie danych jest odpowiednikiem spisu treści w książce.
 
@@ -178,7 +178,7 @@ Procedura składowana jest umiejscowiona bezpośrednio w systemie bazy danych, a
 - wprowadzanie reguł bezpieczeństwa (klient ma prawo wykonać procedurę, a nie wykonać dowolne zapytanie)
 - zmniejszenie liczby interakcji z bazą danych
 
-## Modelowanie Danych...
+## Modelowanie Danych
 
 ### Model związków-encji (entity-relationship model - ER)
 - obiekty świata rzeczywistego reprezentowane za pomocą encji (entities)
@@ -207,11 +207,11 @@ Każda relacja posiada następujące własności
 - kolejność atrybutów nie ma znaczenia
 - wartości atrybutów są atomowe
 
-## Systemy...
+## Systemy
 
 ???
 
-## Transakcje...
+## Transakcje
 
 Transakcje to jedno z podstawowych pojęć współczesnych systemów baz danych. Umożliwiają one współbieżny dostęp do zawartości bazy danych, dostarczając niezbędnych mechanizmów synchronizacji.
 
@@ -228,7 +228,7 @@ ACID – zbiór właściwości gwarantujących poprawne przetwarzanie transakcji
   - serializable (szeregowalne) – wyniki współbieżnie realizowanych zapytań muszą być identyczne z wynikami tych samych zapytań realizowanych szeregowo (pełna izolacja).
 
 
-## Administrowanie...
+## Administrowanie
 
 Składnia polecenia CREATE USER:
 ```sql
