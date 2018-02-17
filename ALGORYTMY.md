@@ -8,10 +8,10 @@
 6. [Algorytmy rekurencyjne; zapisywanie wybranych klasycznych algorytmów w postaci rekurencyjnej.](#algorytmy-rekurencyjne) 
 7. [Metoda dziel i zwyciężaj. Metoda równego podziału, metoda Newtona-Raphsona (stycznych).](#metoda-dziel-i-zwyciężaj) 
 8. [Abstrakcyjne struktury danych: stosy, kolejki FIFO, kolejki priorytetowe, słowniki - ich implementacje (np tablice, listy dowiązane, kopce, drzewa binarne, drzewa BST) oraz zastosowania.](#struktury-danych)
-8. Kodowanie Huffmana.
-10. Algorytm Kruskala.
-11. Tablice z haszowaniem (asocjacyjne). Rozwiązywanie kolizji - metoda łańcuchowa i adresowanie otwarte.
-12. Szyfrowanie Cezara.
+8. [Kodowanie Huffmana.](#kodowanie-huffmana)
+10. [Algorytm Kruskala.](#algorytm-kruskala)
+11. [Tablice z haszowaniem (asocjacyjne). Rozwiązywanie kolizji - metoda łańcuchowa i adresowanie otwarte.](#tablice-z-haszowaniem)
+12. [Szyfrowanie Cezara.](#szyfrowanie-cezara)
 
 ## Pojęcie algorytmu
 
@@ -422,3 +422,19 @@ Słownik to struktura danych reprezentująca dynamiczny (tzn. mogący zmieniac s
 
 Implementacja bazuje głównie na drzewach (AVL, BST, B-Drzewa):
 [Link](http://wazniak.mimuw.edu.pl/index.php?title=Algorytmy_i_struktury_danych/S%C5%82owniki)
+
+## Kodowanie Huffmana
+
+[Wiki](https://pl.wikipedia.org/wiki/Kodowanie_Huffmana)
+
+## Algorytm Kruskala
+
+[Wiki](https://pl.wikipedia.org/wiki/Algorytm_Kruskala)
+
+## Tablice z Haszowaniem
+
+[Link](http://eduinf.waw.pl/inf/alg/001_search/0067e.php)
+
+## Szyfrowanie Cezara
+
+KEK

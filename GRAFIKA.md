@@ -5,8 +5,8 @@
 3. [Formaty plików graficznych.](#formaty-plików-graficznych)
 4. [Rzutowanie.](#rzutowanie)
 5. [Rendering.](#rendering)
-6. [Rasteryzacja, algorytmy rysowania prymitywów graficznych, antyaliasing.](#rasteryzacja...) 
-7. [Generowanie sceny przy pomocy “śledzenia promieni”.](#generowanie-sceny...) 
+6. [Rasteryzacja, algorytmy rysowania prymitywów graficznych, antyaliasing.](#rasteryzacja) 
+7. [Generowanie sceny przy pomocy “śledzenia promieni”.](#generowanie-sceny) 
 8. [Algorytmy eliminowania powierzchni zasłoniętych.](#algorytm-eliminowania-powierzchni-zasłoniętych)
 9. [Modele oświetlenia.](#modele-oświetlenia) 
 10. [Materiały, tekstury.](#materiały-i-tekstury)
@@ -185,7 +185,7 @@ Równoległy:
 
 ## Rendering [SKIP]
 
-## Rasteryzacja...
+## Rasteryzacja
 
 Rasteryzacja – działanie polegające na jak najwierniejszym przedstawieniu płaskiej figury geometrycznej na urządzeniu rastrowym, dysponującym skończoną rozdzielczością.
 
@@ -207,7 +207,7 @@ Rasteryzacja – działanie polegające na jak najwierniejszym przedstawieniu p�
 
 Zespół technik służących zmniejszeniu liczby błędów zniekształceniowych aliasing lub schodkowania obrazu, powstających przy reprezentacji obrazu lub sygnału o wysokiej rozdzielczości w rozdzielczości mniejszej.
 
-## Generowanie sceny...
+## Generowanie sceny
 
 Technika generowania fotorealistycznych obrazów scen trójwymiarowych. Opiera się na analizowaniu tylko tych promieni światła, które trafiają bezpośrednio do obserwatora.
 
