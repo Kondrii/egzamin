@@ -4,7 +4,7 @@
 2. [Klasyczne algorytmy](#klasyczne-algorytmy)
 3. [Czasowa i pamięciowa złożoność obliczeniowa algorytmu. Złożoność optymistyczna, pesymistyczna, średnia.](#złożoność-obliczeniowa)
 4. [Notacja asymptotyczna i jej znaczenie w teorii algorytmów, rzędy wielkości funkcji.](#notacja-asymptotyczna)
-5. Algorytmy sortowania. Dokładny opis wraz z pseudokodem, sortowania bąbelkowego, przez wstawianie oraz sortowania przez wybieranie. Zasada działania sortowania przez scalanie oraz sortowania szybkiego. Właściwości wszystkich powyższych algorytmów oraz ich złożoności czasowe.
+5. [Algorytmy sortowania. Dokładny opis wraz z pseudokodem, sortowania bąbelkowego, przez wstawianie oraz sortowania przez wybieranie. Zasada działania sortowania przez scalanie oraz sortowania szybkiego. Właściwości wszystkich powyższych algorytmów oraz ich złożoności czasowe.](#algorytmy-sortowania)
 6. Algorytmy rekurencyjne; zapisywanie wybranych klasycznych algorytmów w postaci rekurencyjnej. 
 7. Metoda dziel i zwyciężaj. Metoda równego podziału, metoda Newtona-Raphsona (stycznych). 
 8. Abstrakcyjne struktury danych: stosy, kolejki FIFO, kolejki priorytetowe, słowniki - ich implementacje (np tablice, listy dowiązane, kopce, drzewa binarne, drzewa BST) oraz zastosowania.
@@ -210,3 +210,117 @@ Dodatkowo, definiuje się niedokładne ograniczenie - 'małe omega'.
 ![Rzędy](./Images/OrdersOfMagnitude.png)
 
 ## Algorytmy Sortowania
+
+### Bąbelkowe
+
+```
+Dane wejściowe
+n	- liczba elementów w sortowanym zbiorze, n   N
+d[ ]	- zbiór n-elementowy, który będzie sortowany. Elementy zbioru mają indeksy od 1 do n.
+Dane wyjściowe
+d[ ]	- posortowany zbiór n-elementowy. Elementy zbioru mają indeksy od 1 do n.
+Zmienne pomocnicze
+i, j	- zmienne sterujące pętli, i, j Î N
+ 
+
+Lista kroków
+K01:	Dla j = 1,2,...,n - 1: wykonuj K02
+K02:	    Dla i = 1,2,...,n - 1: jeśli d[i] > d[i + 1], to d[i] ↔ d[i + 1]
+K03:	Zakończ
+```
+
+Cechy Algorytmu Sortowania Bąbelkowego
+
+- klasa złożoności obliczeniowej optymistyczna  O(n2)
+- klasa złożoności obliczeniowej typowa  O(n2)
+- klasa złożoności obliczeniowej pesymistyczna O(n2)
+- Sortowanie w miejscu TAK
+- Stabilność TAK
+
+### Wstawianie
+
+```
+Dane wejściowe
+n	- liczba elementów w sortowanym zbiorze, n   N
+d[ ]	- zbiór n-elementowy, który będzie sortowany. Elementy zbioru mają indeksy od 1 do n.
+Dane wyjściowe
+d[ ]	- posortowany zbiór n-elementowy. Elementy zbioru mają indeksy od 1 do n.
+Zmienne pomocnicze
+i, j	- zmienne sterujące pętli, i, j   N
+x	- zawiera wybrany ze zbioru element.
+ 
+
+Lista kroków
+K01:	Dla j = n - 1, n - 2, ..., 1: wykonuj K02...K04
+K02:	    x ← d[j];  i ← j + 1
+K03:	    Dopóki ( i ≤ n )  ∧  ( x > d[i] ): wykonuj d[i - 1] ← d[i];  i ← i + 1
+K04:	    d[i - 1] ← x
+K05:	Zakończ
+```
+
+Cechy Algorytmu Sortowania Przez Wstawianie
+
+- klasa złożoności obliczeniowej optymistyczna	O(n)
+- klasa złożoności obliczeniowej typowa	O(n2)
+- klasa złożoności obliczeniowej pesymistyczna	O(n2)
+- Sortowanie w miejscu	TAK
+- Stabilność	TAK
+
+### Wybieranie
+
+```
+Dane wejściowe
+n	- liczba elementów w sortowanym zbiorze, n   N
+d[ ]	- zbiór n-elementowy, który będzie sortowany. Elementy zbioru mają indeksy od 1 do n.
+Dane wyjściowe
+d[ ]	- posortowany zbiór n-elementowy. Elementy zbioru mają indeksy od 1 do n.
+Zmienne pomocnicze
+i, j	- zmienne sterujące pętli, i, j  N
+pmin	- pozycja elementu minimalnego w zbiorze d[ ],  pmin   N
+ 
+
+Lista kroków
+K01:	Dla j = 1, 2, ..., n - 1: wykonuj K02...K04
+K02:	    pmin ← j
+K03:	    Dla i = j + 1,  j + 2, ..., n: jeśli d[i] < d[pmin], to pmin ← i
+K04:	    d[j] ↔ d[pmin]
+K05:	Zakończ
+```
+
+Cechy Algorytmu Sortowania Przez Wybór
+
+- klasa złożoności obliczeniowej optymistyczna	O(n2)
+- klasa złożoności obliczeniowej typowa	O(n2)
+- klasa złożoności obliczeniowej pesymistyczna	O(n2)
+- Sortowanie w miejscu	TAK
+- Stabilność	NIE
+
+### Scalanie
+
+Wyróżnić można trzy podstawowe kroki:
+
+- Podziel zestaw danych na dwie równe części
+- Zastosuj sortowanie przez scalanie dla każdej z nich oddzielnie, chyba że pozostał już tylko jeden element;
+- Połącz posortowane podciągi w jeden ciąg posortowany.
+
+Scalanie:
+
+![Merge](./Images/MergeSort.gif)
+
+Cechy Algorytmu Sortowania Przez Scalanie
+
+- klasa złożoności obliczeniowej optymistyczna	O(n log n)
+- klasa złożoności obliczeniowej typowa O(n log n)
+- klasa złożoności obliczeniowej pesymistyczna O(n log n)
+- Sortowanie w miejscu	NIE
+- Stabilność	TAK
+
+### QuickSort
+
+Cechy Algorytmu Sortowania Szybkiego
+
+- klasa złożoności obliczeniowej optymistyczna	O(n log n)
+- klasa złożoności obliczeniowej typowa O(n log n)
+- klasa złożoności obliczeniowej pesymistyczna	O(n2)
+- Sortowanie w miejscu	TAK
+- Stabilność	NIE
