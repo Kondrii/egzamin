@@ -5,9 +5,9 @@
 3. [Czasowa i pamięciowa złożoność obliczeniowa algorytmu. Złożoność optymistyczna, pesymistyczna, średnia.](#złożoność-obliczeniowa)
 4. [Notacja asymptotyczna i jej znaczenie w teorii algorytmów, rzędy wielkości funkcji.](#notacja-asymptotyczna)
 5. [Algorytmy sortowania. Dokładny opis wraz z pseudokodem, sortowania bąbelkowego, przez wstawianie oraz sortowania przez wybieranie. Zasada działania sortowania przez scalanie oraz sortowania szybkiego. Właściwości wszystkich powyższych algorytmów oraz ich złożoności czasowe.](#algorytmy-sortowania)
-6. Algorytmy rekurencyjne; zapisywanie wybranych klasycznych algorytmów w postaci rekurencyjnej. 
-7. Metoda dziel i zwyciężaj. Metoda równego podziału, metoda Newtona-Raphsona (stycznych). 
-8. Abstrakcyjne struktury danych: stosy, kolejki FIFO, kolejki priorytetowe, słowniki - ich implementacje (np tablice, listy dowiązane, kopce, drzewa binarne, drzewa BST) oraz zastosowania.
+6. [Algorytmy rekurencyjne; zapisywanie wybranych klasycznych algorytmów w postaci rekurencyjnej.](#algorytmy-rekurencyjne) 
+7. [Metoda dziel i zwyciężaj. Metoda równego podziału, metoda Newtona-Raphsona (stycznych).](#metoda-dziel-i-zwyciężaj) 
+8. [Abstrakcyjne struktury danych: stosy, kolejki FIFO, kolejki priorytetowe, słowniki - ich implementacje (np tablice, listy dowiązane, kopce, drzewa binarne, drzewa BST) oraz zastosowania.](#struktury-danych)
 8. Kodowanie Huffmana.
 10. Algorytm Kruskala.
 11. Tablice z haszowaniem (asocjacyjne). Rozwiązywanie kolizji - metoda łańcuchowa i adresowanie otwarte.
@@ -229,6 +229,10 @@ K02:	    Dla i = 1,2,...,n - 1: jeśli d[i] > d[i + 1], to d[i] ↔ d[i + 1]
 K03:	Zakończ
 ```
 
+Przykład:
+
+![Bubble](./Images/Bubble.gif)
+
 Cechy Algorytmu Sortowania Bąbelkowego
 
 - klasa złożoności obliczeniowej optymistyczna  O(n2)
@@ -257,6 +261,10 @@ K03:	    Dopóki ( i ≤ n )  ∧  ( x > d[i] ): wykonuj d[i - 1] ← d[i];  i �
 K04:	    d[i - 1] ← x
 K05:	Zakończ
 ```
+
+Przykład:
+
+![Insertion](./Images/Insertion.gif)
 
 Cechy Algorytmu Sortowania Przez Wstawianie
 
@@ -287,6 +295,10 @@ K04:	    d[j] ↔ d[pmin]
 K05:	Zakończ
 ```
 
+Przykład:
+
+![Selection](./Images/Selection.gif)
+
 Cechy Algorytmu Sortowania Przez Wybór
 
 - klasa złożoności obliczeniowej optymistyczna	O(n2)
@@ -303,7 +315,7 @@ Wyróżnić można trzy podstawowe kroki:
 - Zastosuj sortowanie przez scalanie dla każdej z nich oddzielnie, chyba że pozostał już tylko jeden element;
 - Połącz posortowane podciągi w jeden ciąg posortowany.
 
-Scalanie:
+Przykład:
 
 ![Merge](./Images/MergeSort.gif)
 
@@ -317,6 +329,12 @@ Cechy Algorytmu Sortowania Przez Scalanie
 
 ### QuickSort
 
+Z tablicy wybiera się element rozdzielający, po czym tablica jest dzielona na dwa fragmenty: do początkowego przenoszone są wszystkie elementy nie większe od rozdzielającego, do końcowego wszystkie większe. Potem sortuje się osobno początkową i końcową część tablicy[1]. Rekursja kończy się, gdy kolejny fragment uzyskany z podziału zawiera pojedynczy element, jako że jednoelementowa tablica nie wymaga sortowania.
+
+Przykład:
+
+![Quick](./Images/Quick.gif)
+
 Cechy Algorytmu Sortowania Szybkiego
 
 - klasa złożoności obliczeniowej optymistyczna	O(n log n)
@@ -324,3 +342,83 @@ Cechy Algorytmu Sortowania Szybkiego
 - klasa złożoności obliczeniowej pesymistyczna	O(n2)
 - Sortowanie w miejscu	TAK
 - Stabilność	NIE
+
+## Algorytmy Rekurencyjne
+
+Charakterystyczną cechą funkcji (procedury) rekurencyjnej jest to, że wywołuje ona samą siebie. Drugą cechą rekursji jest jej dziedzina, którą mogą być tylko liczby naturalne.
+
+## Metoda Dziel I Zwyciężaj
+
+### Dziel I Zwyciężaj
+
+Dziel i zwyciężaj (ang. divide and conquer) – jedna z głównych metod projektowania algorytmów w informatyce, prowadząca do bardzo efektywnych rozwiązań. Nazwa pochodzi od łacińskiej sentencji dziel i rządź (łac. divide et impera). W strategii tej problem dzieli się rekurencyjnie na dwa lub więcej mniejszych podproblemów tego samego (lub podobnego) typu tak długo, aż fragmenty staną się wystarczająco proste do bezpośredniego rozwiązania. Z kolei rozwiązania otrzymane dla podproblemów scala się, uzyskując rozwiązanie całego zadania.
+
+### Metoda Równego Podziału
+
+[Link](http://www.algorytm.org/procedury-numeryczne/metoda-polowienia.html)
+
+### Metoda Newtona-Raphsona
+
+[Link](http://www.algorytm.org/procedury-numeryczne/metoda-newtona.html)
+
+## Struktury Danych
+
+### Stosy
+
+Stos to struktura danych, którą możemy porównać do naleśników nakładanych na jedną stertę. W danej chwili możemy wykonać jedną z dwóch operacji:
+
+- push(element) - dodanie elementu na wierzchołek stosu (tu naleśnika)
+- pop() - zdjęcie elementu z wierzchołka stosu
+
+W tej strukturze danych nie mamy bezpośredniego dostępu do elementu, który nie jest na szczycie. Aby dostać się do innego elementu niż wierzchołek, należy zdjąć wszystkie, które są nad nim.
+
+Stos nazywany jest także kolejką lifo - last in first out - ostatni wrzucony na stos jest pierwszym do zdjęcia. Używany jest w wielu algorytmach, między innymi w algorytmie grafowym - przeszukiwanie w głąb - DFS.
+
+Implementacja bazuje na tablicach i listach dowiązanych:
+[Link](http://www.algorytm.edu.pl/struktury-danych/kolejka-fifo.html)
+
+### Kolejki FIFO
+
+Kolejka (ang. queue) jest sekwencyjną strukturą danych o takiej własności, iż element zapisany jako pierwszy jest również odczytywany jako pierwszy. Taka struktura w literaturze informatycznej nosi nazwę FIFO (ang. First In First Out – pierwszy wchodzi, pierwszy wychodzi). Kolejkę możemy sobie wyobrazić jako tubę – elementy wstawiamy do tuby z jednej strony, po czym przesuwają się one wewnątrz i wychodzą z drugiej strony w tej samej kolejności, w jakiej zostały do tuby włożone.
+
+Dla kolejki są zdefiniowane operacje:
+
+- Sprawdzenie, czy kolejka jest pusta – operacja empty zwraca true, jeśli kolejka nie zawiera żadnego elementu, w przeciwnym razie zwraca false.
+- Odczyt elementu z początku kolejki – operacja front zwraca wskazanie do elementu, który jest pierwszy w kolejce.
+- Zapis elementu na koniec kolejki – operacja push dopisuje nowy element na koniec elementów przechowywanych w kolejce.
+- Usunięcie elementu z kolejki – operacja pop usuwa z kolejki pierwszy element.
+
+Implementacja bazuje na tablicach i listach dowiązanych:
+[Link](http://eduinf.waw.pl/inf/alg/001_search/0105.php)
+
+### Kolejki Priorytetowe
+
+Oferują następujące operacje:
+
+- MakePQ(): tworzy nową, pustą kolejkę;
+- Insert(H,x): wstawia element x (o kluczu z pewnego liniowo uporządkowanego uniwersum) do kolejki H;
+- FindMin(H): zwraca element o najmniejszym kluczu w kolejce H;
+- DelMin(H): zwraca element o najmniejszym kluczu w kolejce H, usuwając go przy tym z H.
+
+Zastosowania:
+
+- algorytm Dijkstry wyznaczania najkrótszych ścieżek w grafach;
+- algorytm Prima znajdowania minimalnego drzewa rozpinającego;
+- symulacja sterowana zdarzeniami;
+- metoda zamiatania w geometrii obliczeniowej;
+- kodowanie Huffmana;
+- sortowanie (algorytm Heapsort).
+
+Implementacja bazuje na drzewach i kopcach:
+[Link](http://wazniak.mimuw.edu.pl/index.php?title=Algorytmy_i_struktury_danych/Kolejki_priorytetowe)
+
+### Słowniki
+
+Słownik to struktura danych reprezentująca dynamiczny (tzn. mogący zmieniac się w czasie) zbiór elementów (kluczy), na którym można wykonywać następujące operacje:
+
+- Find(S,x): zwraca klucz x ze słownika S, albo NULL jeśli tego klucza nie ma w słowniku;
+- Insert(S,x): wstawia klucz x do słownika S;
+- Delete(S,x): usuwa klucz x ze słownika S.
+
+Implementacja bazuje głównie na drzewach (AVL, BST, B-Drzewa):
+[Link](http://wazniak.mimuw.edu.pl/index.php?title=Algorytmy_i_struktury_danych/S%C5%82owniki)
