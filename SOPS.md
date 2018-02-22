@@ -40,30 +40,36 @@ Budowa:
   - usuwanie deskryptora zasobu
   - realizacja żądania przydziału
   - zwolnienie i odzyskiwanie zasobu
+  
 - Zarządzanie zasobami systemu komputerowego
   - przydział zasobów
   - synchronizacja dostępu do zasobów (zapobieganie interferencji)
   - ochrona i autoryzacja dostępu do zasobów
   - odzyskiwanie zasobów
   - rozliczanie - gromadzenie danych o wykorzystaniu zasobów.
+  
 - Zarządzanie procesem
   - tworzenie i usuwanie procesu
   - wstrzymywanie i przywracanie procesu
   - zapewnienie mechanizmów pozwalających na synchronizację procesów oraz komunikację między procesami.
+  
 - Zarządzanie pamięcią operacyjną
   - utrzymywanie informacji, która część pamięci jest aktualnie używana i przez kogo
   - decydowania, który proces powinien zostać wczytany do pamięci, jeżeli pamięć jest wolna
   - przydzielanie i zwalnianie pamięci
+  
 - Zarządzanie plikami
   - tworzenie i kasowanie plików
   - tworzenie i kasowanie katalogów
   - wsparcie dla użytkowników końcowych przy operacjach na plikach
   - mapowanie plików na nośniku danych
   - tworzenie kopii plików
+  
 - Zarządzanie wejściem/wyjściem - system wejścia/wyjścia składa się z: 
   - systemu buforowania, 
   - interfejsu urządzeń głównych, 
   - sterowników (kontrolerów) dla specyficznych urządzeń.
+  
 - Zarządzenie nośnikami danych
   - zarządzanie wolną pamięcią
   - alokacją zapisu
