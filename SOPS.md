@@ -1,13 +1,13 @@
 # Systemy operacyjne i programowanie systemowe
 
-1. [Koncepcja systemu operacyjnego, typowa funkcjonalność, realizacje.]()
-2. [Zarządzanie zasobami, abstrakcje systemowe.]()
-3. [Procesy i wątki, wielozadaniowość/wielowątkowość, wielodostęp.]()
-4. [Mechanizmy komunikacji wewnątrzsystemowej.]()
-5. [Zarządzanie zbiorami danych, pliki, systemy plików.]()
-6. [Interfejsy systemowe dla wykonywanego kodu, dla programisty, dla użytkownika.]()
-7. [Wirtualizacja sprzętu i zasobów systemowych.]()
-8. [Współczesne koncepcje budowy systemów operacyjnych.]()
+1. [Koncepcja systemu operacyjnego, typowa funkcjonalność, realizacje.](#koncepcja-systemu-operacyjnego)
+2. [Zarządzanie zasobami, abstrakcje systemowe.](#zarządzanie-zasobami)
+3. [Procesy i wątki, wielozadaniowość/wielowątkowość, wielodostęp.](#procesy-i-wątki)
+4. [Mechanizmy komunikacji wewnątrzsystemowej.](#mechanizmy-komunikacji)
+5. [Zarządzanie zbiorami danych, pliki, systemy plików.](#zarządzanie-zbiorami-danych)
+6. [Interfejsy systemowe dla wykonywanego kodu, dla programisty, dla użytkownika.](#interfejsy-systemowe)
+7. [Wirtualizacja sprzętu i zasobów systemowych.](#wirtualizacja)
+8. [Współczesne koncepcje budowy systemów operacyjnych.](#współczesne-koncepcje)
 
 ## Koncepcja systemu operacyjnego
 
